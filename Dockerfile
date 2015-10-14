@@ -14,6 +14,9 @@ RUN apt-get install -qy git
 RUN git clone https://github.com/sstephenson/rbenv.git ~/.rbenv
 RUN echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bash_profile
 RUN echo 'eval "$(rbenv init -)"' >> ~/.bash_profile
+RUN echo 'git clone git://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build'
+RUN echo 'export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"' >> ~/.bash_profile
+RUN exec $SHELL
 RUN /bin/bash -l -c "rbenv install 2.2.2"
 RUN /bin/bash -l -c "rbenv global 2.2.2"
 
