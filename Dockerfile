@@ -14,7 +14,6 @@ RUN apt-get install -qy git
 RUN git clone https://github.com/sstephenson/rbenv.git ~/.rbenv
 RUN echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bash_profile
 RUN echo 'eval "$(rbenv init -)"' >> ~/.bash_profile
-RUN type rbenv
 RUN /bin/bash -l -c "rbenv install 2.2.2"
 RUN /bin/bash -l -c "rbenv global 2.2.2"
 
