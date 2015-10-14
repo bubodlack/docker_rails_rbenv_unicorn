@@ -8,6 +8,7 @@ RUN apt-get update -q
 RUN apt-get install -qy build-essential
 RUN apt-get install -qy curl
 RUN apt-get install -qy nodejs
+RUN apt-get install -qy git
 
 # Install rvm, ruby, bundler
 RUN git clone https://github.com/sstephenson/rbenv.git ~/.rbenv
